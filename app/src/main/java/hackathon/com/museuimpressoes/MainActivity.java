@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToDetails(View view){
-        
+        Intent galleryIntent = new Intent(this, DetailsActivity.class);
+        startActivity(galleryIntent);
     }
 
     @Override
