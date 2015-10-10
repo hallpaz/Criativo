@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PieceGalleryActivity"
-            android:label="@string/title_activity_piece_gallery"
+            android:name=".DetailsActivity"
+            android:label="@string/title_activity_details"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
