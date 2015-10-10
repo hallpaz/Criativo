@@ -23,6 +23,11 @@
             android:label="@string/title_activity_details"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".PieceGalleryActivity"
+            android:label="@string/title_activity_piece_gallery"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
