@@ -1,5 +1,6 @@
 package hackathon.com.museuimpressoes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToGallery(View view){
-
+        Intent galleryIntent = new Intent(this, PieceGalleryActivity.class);
+        startActivity(galleryIntent);
     }
 
     public void goToDetails(View view){
