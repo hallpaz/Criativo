@@ -25,7 +25,7 @@ public class PieceGalleryActivity extends AppCompatActivity implements View.OnCl
         imageScrollView = (NestedScrollView) findViewById(R.id.imageScrollView);
 
         BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
-        Bitmap bm = BitmapFactory.decodeFile("filename", bitmapOptions);
+        Bitmap bm = BitmapFactory.decodeFile(getString(R.drawable.sepia_nature), bitmapOptions);
 
         ImageView image = new ImageView(this);
         image.setImageBitmap(bm);
