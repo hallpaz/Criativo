@@ -9,7 +9,9 @@
     <android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
         android:fitsSystemWindows="true" android:layout_height="@dimen/app_bar_height"
         android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/details_background">
+        android:background="@drawable/details_background"
+        android:clickable="true"
+        >
 
         <android.support.design.widget.CollapsingToolbarLayout android:id="@+id/toolbar_layout"
             android:fitsSystemWindows="true" android:layout_width="match_parent"
@@ -28,6 +30,7 @@
     <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin" app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end" android:src="@android:drawable/ic_dialog_email" />
+        app:layout_anchorGravity="bottom|end" android:src="@android:drawable/ic_dialog_email"
+        />
 
 </android.support.design.widget.CoordinatorLayout>
