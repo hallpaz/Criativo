@@ -8,10 +8,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-public class PieceGalleryActivity extends AppCompatActivity {
+public class PieceGalleryActivity extends AppCompatActivity implements View.OnClickListener {
+    private final String TAG = "PieceGallery";
 
     private NestedScrollView imageScrollView;
 
@@ -22,7 +24,6 @@ public class PieceGalleryActivity extends AppCompatActivity {
 
         imageScrollView = (NestedScrollView) findViewById(R.id.imageScrollView);
 
-
         BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
         Bitmap bm = BitmapFactory.decodeFile("filename", bitmapOptions);
 
@@ -31,5 +32,17 @@ public class PieceGalleryActivity extends AppCompatActivity {
 
         imageScrollView.addView(image);
 
+        image.setOnClickListener(this);
+
     }
+
+    public void onClick(View view){
+        showPieceDetails();
+    }
+
+    public void showPieceDetails(){
+        Log.d(TAG, "Should be showing details");
+    }
+
+
 }
