@@ -140,6 +140,23 @@
         android:layout_below="@id/production_context_text"
         android:layout_marginTop="15dp"
         android:background="#bfbfbf" />
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_below="@id/view2_production_context_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="2.0"
+        android:isIndicator="false" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_below="@id/view2_production_context_text"
+        android:layout_toRightOf="@id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_rating_button" />
 
 
 </RelativeLayout>

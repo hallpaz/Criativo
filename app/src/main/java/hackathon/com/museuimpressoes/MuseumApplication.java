@@ -80,19 +80,28 @@ public class MuseumApplication extends Application {
                     if(beaconKey.contains(String.format("%d:%d", MAJOR_main, MINOR_main))){
 
                         if(!attachedBeacon.equals(activeBeacons.MainBeacon) ){
-                            Log.d(TAG, "Ta de zueira!!!!");
-                            askConfirmation(1);
+                            Intent galleryIntent = new Intent(getApplicationContext(), PieceGalleryActivity.class);
+                            galleryIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(galleryIntent);
                         }
                         attachedBeacon = activeBeacons.MainBeacon;
                     }
 
                     if(beaconKey.contains(String.format("%d:%d", MAJOR_secondary, MINOR_secondary))){
                         if(attachedBeacon != activeBeacons.SecondaryBeacon){
-                            askConfirmation(2);
+                            Intent galleryIntent = new Intent(getApplicationContext(), PieceGalleryActivity.class);
+                            galleryIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(galleryIntent);
                         }
 
                         attachedBeacon = activeBeacons.SecondaryBeacon;
                     }
+                }
+                else{
+                    attachedBeacon = activeBeacons.INVALID;
+                    Intent idleIntent = new Intent(getApplicationContext(), MainActivity.class);
+                    idleIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(idleIntent);
                 }
 
             }

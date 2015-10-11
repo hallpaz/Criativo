@@ -1,5 +1,6 @@
 package hackathon.com.museuimpressoes;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -30,28 +31,16 @@ public class PieceGalleryActivity extends AppCompatActivity implements View.OnCl
 
         imageGrid = (GridView) findViewById(R.id.imageGrid);
         imageGrid.setAdapter(new ImageAdapter(this));
+
         imageGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 Toast.makeText(PieceGalleryActivity.this, "" + position,
                         Toast.LENGTH_SHORT).show();
+                Intent detailsIntent = new Intent(PieceGalleryActivity.this, DetailsActivity.class);
+                startActivity(detailsIntent);
             }
         });
-
-        /*BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
-
-        for(int i = 0; i < 7; ++i){
-            Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.sepia_nature, bitmapOptions);
-            ImageView image = new ImageView(this);
-            image.setImageBitmap(bm);
-            image.setLayoutParams(new GridView.LayoutParams(250, 250));
-            image.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            
-
-            imageGrid.addView(image);
-
-            image.setOnClickListener(this);
-        }*/
 
     }
 

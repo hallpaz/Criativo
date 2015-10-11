@@ -13,5 +13,8 @@
     <string name="production_context_title">"Contexto de Produção"</string>
 
 
+    <string name="submit_rating_button">Enviar</string>
+
+
 
 </resources>
