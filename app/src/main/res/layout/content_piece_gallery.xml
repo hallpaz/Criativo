@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_piece_gallery"
-    android:id="@+id/imageScrollView"
+
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageGrid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hackathon.com.museuimpressoes.PieceGalleryActivity">
-
-    <!-- <LinearLayout
-        android:id="@+id/imageGrid"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        >
-    </LinearLayout> -->
-    <GridLayout
-        android:id="@+id/imageGrid"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:columnCount="3"
-        android:useDefaultMargins="true">
-    </GridLayout>
-
-</android.support.v4.widget.NestedScrollView>
+    android:numColumns="3"
+    android:layout_margin="8dp"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+    />
