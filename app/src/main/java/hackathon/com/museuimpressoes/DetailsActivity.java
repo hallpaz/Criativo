@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+
 public class DetailsActivity extends AppCompatActivity  {
     TextView descTextArtistBiography;
     ImageButton showArtistBiography, hideArtistBiography;

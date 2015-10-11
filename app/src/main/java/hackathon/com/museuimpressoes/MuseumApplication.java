@@ -10,6 +10,9 @@ import com.estimote.sdk.Beacon;
 import com.estimote.sdk.BeaconManager;
 import com.estimote.sdk.Region;
 import com.estimote.sdk.Utils;
+import com.parse.Parse;
+import com.parse.ParseInstallation;
+import com.parse.ParseFacebookUtils;
 
 import java.util.List;
 import java.util.UUID;
@@ -58,12 +61,18 @@ public class MuseumApplication extends Application {
                         MAJOR_range, MINOR_range));
             }
         });*/
-        beaconManager.connect(new BeaconManager.ServiceReadyCallback(){
+        beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
             @Override
             public void onServiceReady() {
                 beaconManager.startRanging(expositionRegion);
             }
         });
+
+        Parse.initialize(this, getResources().getString(R.string.Parse_Application_ID), getResources().getString(R.string.Parse_Client_Key));
+        ParseFacebookUtils.initialize(getApplicationContext());
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
+
     }
 
     private class MuseumBeaconRangingListener implements BeaconManager.RangingListener {
