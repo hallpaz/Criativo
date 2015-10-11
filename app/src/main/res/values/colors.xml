@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#000</color>
 
     <color name="black_overlay">#66000000</color>
 
@@ -10,10 +10,10 @@
     <color name="edit_text_text_color">#2d2c25</color>
     <color name="edit_text_hint_color">#c3cdd6</color>
     <color name="login_icon_background_color">#227fc0</color>
-    <color name="login_button_backgrond_color">#fff</color>
-    <color name="button_text_color">#2d2c25</color>
+    <color name="login_button_backgrond_color">#000</color>
+    <color name="button_text_color">#fff</color>
 
-    <color name="other_button_backgrond_color">#fff</color>
+    <color name="other_button_backgrond_color">#000</color>
     <color name="other_button_backgrond_color_pressed">#c3cdd6</color>
     <color name="other_button_stroke_color_focused">#c3cdd6</color>
 </resources>

@@ -13,6 +13,14 @@
     <string name="title_activity_piece_gallery">Galeria de Obras</string>
 
     <string name="artist_biography_title">Biografia do Artista</string>
+    <string name="artist_biography_text">
+        "ADRIANA VAREJÃO"\n
+        "Adriana Varejão é uma das artistas brasileiras de mais destaque na cena contemporânea, no Brasil e exterior. "\n
+        "Suas obras integram as coleções dos principais museus do mundo e tem alcançado recordes de preço em casas de leilão de Londres e Nova York, atestando o reconhecimento internacional. "\n
+        No Brasil, Adriana ganhou um pavilhão inteiramente dedicado a seu trabalho no Instituto Inhotim, em Minas Gerais.
+        Em sua produção, evoca repertório de imagens associadas à história do período colonial brasileiro, como azulejos e mapas.
+        Apesar de remeter ao barroco, adquire forte contemporaneidade em decorrência do acúmulo excessivo de materiais, camadas de tinta e informações.
+        Em obras que se situam entre a pintura e o relevo, freqüentemente emprega cortes e suturas em telas e outros suportes que permitem entrever materiais internos que imitam o aspecto de carne. </string>
     <string name="production_context_title">"Contexto de Produção"</string>
 
 
