@@ -39,8 +39,4 @@ public class ImageDetailsActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
 }

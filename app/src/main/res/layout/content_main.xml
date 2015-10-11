@@ -23,4 +23,12 @@
         android:layout_height="wrap_content"
         android:onClick="goToDetails"/>
 
+    <Button
+        android:id="@+id/dialogTrigger"
+        android:text="Ask Confirmation"
+        android:layout_below="@id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="askConfirmation"/>
+
 </RelativeLayout>
