@@ -32,7 +32,7 @@ public class DetailsActivity extends AppCompatActivity  {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                      goToGallery(view);
+                        goToImageDetails(view);
                     }
                 }
         );
@@ -41,8 +41,9 @@ public class DetailsActivity extends AppCompatActivity  {
 
 
 
-    public void goToGallery(View view){
-        Intent galleryIntent = new Intent(this, PieceGalleryActivity.class);
-        startActivity(galleryIntent);
+    public void goToImageDetails(View view){
+        Intent imageDetailsIntent = new Intent(this, ImageDetailsActivity.class);
+        imageDetailsIntent.putExtra("image",R.drawable.catorzebis);
+        startActivity(imageDetailsIntent);
     }
 }
