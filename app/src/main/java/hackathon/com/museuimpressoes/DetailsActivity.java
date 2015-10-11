@@ -243,7 +243,7 @@ public class DetailsActivity extends AppCompatActivity  {
 
     public void goToImageDetails(View view){
         Intent imageDetailsIntent = new Intent(this, ImageDetailsActivity.class);
-        imageDetailsIntent.putExtra("image", R.drawable.catorzebis);
+        imageDetailsIntent.putExtra("image", R.drawable.varejao);
         startActivity(imageDetailsIntent);
     }
     public static MediaPlayer getMediaPlayer(Context context){
