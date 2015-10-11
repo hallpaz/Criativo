@@ -7,8 +7,143 @@
     tools:showIn="@layout/activity_details" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="hackathon.com.museuimpressoes.DetailsActivity">
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView android:id="@+id/section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/title_text_margin"
+        android:text="Placeholder"
+        android:textSize="32sp"/>
+    <TextView android:id="@+id/section_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="@dimen/text_margin"
+        android:layout_below="@id/section_title"
+        android:text="Placeholder"
+        android:textSize="20sp"/>
+    <TextView android:id="@+id/section_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginBottom="@dimen/text_margin"
+        android:layout_below="@id/section_year"
+        android:text="Placeholder"
+        android:textSize="20sp"/>
+    <TextView android:id="@+id/section_techinique"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginBottom="@dimen/text_margin"
+        android:layout_below="@id/section_collection"
+        android:text="Placeholder"
+        android:textSize="20sp"/>
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin" android:text="@string/large_text" />
+    <View
+        android:id="@+id/view1_artist_biography_text"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/section_techinique"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="#bfbfbf" />
+    <TextView
+        android:id="@+id/artist_biography_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1_artist_biography_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"
+        android:text="@string/artist_biography_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        />
+
+    <ImageButton
+        android:id="@+id/show_artist_biography_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_menu_add"
+        android:clickable="true" />
+
+    <ImageButton
+        android:id="@+id/hide_artist_biography_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_menu_close_clear_cancel"
+        android:clickable="true"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view2_artist_biography_text"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/artist_biography_text"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="#bfbfbf" />
+
+    <TextView
+        android:id="@+id/production_context_text"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view2_artist_biography_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:maxLines="1"
+        android:text="@string/production_context_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        />
+
+    <ImageButton
+        android:id="@+id/show_production_context_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/production_context_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_menu_add"
+        android:clickable="true" />
+
+    <ImageButton
+        android:id="@+id/hide_production_context_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/production_context_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_menu_close_clear_cancel"
+        android:clickable="true"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view2_production_context_text"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/production_context_text"
+        android:layout_marginTop="15dp"
+        android:background="#bfbfbf" />
+
+
+</RelativeLayout>
+
+
 
 </android.support.v4.widget.NestedScrollView>
