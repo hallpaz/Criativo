@@ -38,8 +38,8 @@ public class DetailsActivity extends AppCompatActivity  {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         description_audio = MediaPlayer.create(DetailsActivity.this, R.raw.description_audio);
-        productionContext_audio = MediaPlayer.create(DetailsActivity.this, R.raw.description_audio);
-        artistBiographyText_audio = MediaPlayer.create(DetailsActivity.this, R.raw.description_audio);
+        productionContext_audio = MediaPlayer.create(DetailsActivity.this, R.raw.context_audio);
+        artistBiographyText_audio = MediaPlayer.create(DetailsActivity.this, R.raw.biography_audio);
         fab = (ImageButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
