@@ -15,16 +15,19 @@
     <TextView android:id="@+id/section_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/title_text_margin"
-        android:text="Placeholder"
-        android:textSize="32sp"/>
+        android:text="Mapa de Lopo Homem II - Série Terra Incógnita"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="60dp"/>
     <TextView android:id="@+id/section_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="@dimen/text_margin"
         android:layout_below="@id/section_title"
-        android:text="Placeholder"
+        android:text="Ano: 1992 - 2004"
         android:textSize="20sp"/>
     <TextView android:id="@+id/section_collection"
         android:layout_width="match_parent"
@@ -33,7 +36,7 @@
         android:layout_marginTop="@dimen/text_margin"
         android:layout_marginBottom="@dimen/text_margin"
         android:layout_below="@id/section_year"
-        android:text="Placeholder"
+        android:text="Coleção: Particular/Adriana Varejão"
         android:textSize="20sp"/>
     <TextView android:id="@+id/section_techinique"
         android:layout_width="match_parent"
@@ -42,7 +45,7 @@
         android:layout_marginTop="@dimen/text_margin"
         android:layout_marginBottom="@dimen/text_margin"
         android:layout_below="@id/section_collection"
-        android:text="Placeholder"
+        android:text="Técnica: Olho sobre Madeira e Linha de Saturação"
         android:textSize="20sp"/>
 
     <View
@@ -76,7 +79,8 @@
         android:layout_alignBottom="@id/artist_biography_text"
         android:layout_marginRight="20dp"
         android:background="@android:drawable/ic_menu_add"
-        android:clickable="true" />
+        android:clickable="true"
+        android:text="@string/artist_biography_text"/>
 
     <ImageButton
         android:id="@+id/hide_artist_biography_text"
@@ -88,6 +92,27 @@
         android:background="@android:drawable/ic_menu_close_clear_cancel"
         android:clickable="true"
         android:visibility="invisible" />
+    <ImageButton
+        android:id="@+id/play_artist_biography_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_toLeftOf="@id/hide_artist_biography_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_media_play"
+        android:clickable="true"
+        android:visibility="invisible" />
+    <ImageButton
+        android:id="@+id/stop_artist_biography_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_toLeftOf="@id/hide_artist_biography_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/checkbox_off_background"
+        android:clickable="true"
+        android:visibility="invisible" />
+
 
     <View
         android:id="@+id/view2_artist_biography_text"
@@ -132,6 +157,38 @@
         android:background="@android:drawable/ic_menu_close_clear_cancel"
         android:clickable="true"
         android:visibility="invisible" />
+    <ImageButton
+        android:id="@+id/play_production_context_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@id/production_context_text"
+        android:layout_toLeftOf="@id/hide_production_context_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_media_play"
+        android:clickable="true"
+        android:visibility="invisible" />
+    <ImageButton
+    android:id="@+id/stop_production_context_text"
+    android:layout_width="40sp"
+    android:layout_height="40sp"
+    android:layout_alignBottom="@id/production_context_text"
+    android:layout_toLeftOf="@id/hide_production_context_text"
+    android:layout_marginRight="20dp"
+    android:background="@android:drawable/checkbox_off_background"
+    android:clickable="true"
+    android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/video_production_context_text"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@id/production_context_text"
+        android:layout_toLeftOf="@id/hide_production_context_text"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/checkbox_off_background"
+        android:clickable="true"
+        android:visibility="invisible" />
+
 
     <View
         android:id="@+id/view2_production_context_text"

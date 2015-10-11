@@ -2,8 +2,10 @@ package hackathon.com.museuimpressoes;
 
 import android.app.AlertDialog;
 import android.app.Application;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.util.Log;
 
 import com.estimote.sdk.Beacon;
@@ -14,8 +16,13 @@ import com.parse.Parse;
 import com.parse.ParseInstallation;
 import com.parse.ParseFacebookUtils;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.List;
 import java.util.UUID;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 /**
  * Created by hallpaz on 11/10/2015.
@@ -60,7 +67,6 @@ public class MuseumApplication extends Application {
                         MAJOR_range, MINOR_range));
             }
         });*/
-
 
         Parse.initialize(this, getResources().getString(R.string.Parse_Application_ID), getResources().getString(R.string.Parse_Client_Key));
         ParseFacebookUtils.initialize(getApplicationContext());
@@ -160,5 +166,6 @@ public class MuseumApplication extends Application {
             idleIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(idleIntent);
         }
+
     }
 }
