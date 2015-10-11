@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 public class PieceGalleryActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = "PieceGallery";
+    public static final String PANELExtra = "panelName";
 
     private GridView imageGrid;
 
@@ -29,8 +30,13 @@ public class PieceGalleryActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_piece_gallery);
 
+        Intent receiver = getIntent();
+
+        String panelName = receiver.getStringExtra(PANELExtra);
+
+
         imageGrid = (GridView) findViewById(R.id.imageGrid);
-        imageGrid.setAdapter(new ImageAdapter(this, "test_panel"));
+        imageGrid.setAdapter(new ImageAdapter(this, panelName));
 
         imageGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,

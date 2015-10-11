@@ -28,7 +28,6 @@ import java.util.logging.LogRecord;
  * Created by hallpaz on 11/10/2015.
  */
 public class MuseumApplication extends Application {
-
     private final String TAG = "APP";
     private BeaconManager beaconManager;
     private final String mainBeaconUUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D";
@@ -68,18 +67,21 @@ public class MuseumApplication extends Application {
                         MAJOR_range, MINOR_range));
             }
         });*/
-        /*beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
-            @Override
-            public void onServiceReady() {
-                beaconManager.startRanging(expositionRegion);
-            }
-        });*/
 
         Parse.initialize(this, getResources().getString(R.string.Parse_Application_ID), getResources().getString(R.string.Parse_Client_Key));
         ParseFacebookUtils.initialize(getApplicationContext());
         ParseInstallation.getCurrentInstallation().saveInBackground();
 
 
+    }
+
+    public void startBeacons(){
+        beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
+            @Override
+            public void onServiceReady() {
+                beaconManager.startRanging(expositionRegion);
+            }
+        });
     }
 
     private class MuseumBeaconRangingListener implements BeaconManager.RangingListener {
@@ -90,7 +92,7 @@ public class MuseumApplication extends Application {
             if (!list.isEmpty()) {
 
                 Beacon nearestBeacon = list.get(0);
-                if(Utils.computeProximity(nearestBeacon) == Utils.Proximity.IMMEDIATE){
+                if((Utils.computeProximity(nearestBeacon) == Utils.Proximity.IMMEDIATE) ||  (Utils.computeProximity(nearestBeacon) == Utils.Proximity.NEAR)){
                     Log.d(TAG, "discovered IMMEDIATE " + nearestBeacon.getMajor());
                     String beaconKey = String.format("%d:%d", nearestBeacon.getMajor(), nearestBeacon.getMinor());
                     if(beaconKey.contains(String.format("%d:%d", MAJOR_main, MINOR_main))){
@@ -98,6 +100,7 @@ public class MuseumApplication extends Application {
                         if(!attachedBeacon.equals(activeBeacons.MainBeacon) ){
                             Intent galleryIntent = new Intent(getApplicationContext(), PieceGalleryActivity.class);
                             galleryIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            galleryIntent.putExtra(PieceGalleryActivity.PANELExtra, "Varejão");
                             startActivity(galleryIntent);
                         }
                         attachedBeacon = activeBeacons.MainBeacon;
@@ -107,6 +110,7 @@ public class MuseumApplication extends Application {
                         if(attachedBeacon != activeBeacons.SecondaryBeacon){
                             Intent galleryIntent = new Intent(getApplicationContext(), PieceGalleryActivity.class);
                             galleryIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            galleryIntent.putExtra(PieceGalleryActivity.PANELExtra, "São Sebastião");
                             startActivity(galleryIntent);
                         }
 
@@ -114,10 +118,13 @@ public class MuseumApplication extends Application {
                     }
                 }
                 else{
+                    if(attachedBeacon.equals(activeBeacons.INVALID)){
+                        Intent idleIntent = new Intent(getApplicationContext(), MainActivity.class);
+                        idleIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(idleIntent);
+                    }
+                    
                     attachedBeacon = activeBeacons.INVALID;
-                    Intent idleIntent = new Intent(getApplicationContext(), MainActivity.class);
-                    idleIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(idleIntent);
                 }
 
             }

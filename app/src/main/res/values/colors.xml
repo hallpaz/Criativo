@@ -16,4 +16,11 @@
     <color name="other_button_backgrond_color">#000</color>
     <color name="other_button_backgrond_color_pressed">#c3cdd6</color>
     <color name="other_button_stroke_color_focused">#c3cdd6</color>
+
+
+
+
+    <color name="header_text_color">#fff</color>
+    <color name="header_background_color">#ef5319</color>
+
 </resources>

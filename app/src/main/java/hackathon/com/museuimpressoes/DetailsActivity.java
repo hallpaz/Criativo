@@ -119,7 +119,6 @@ public class DetailsActivity extends AppCompatActivity  {
                 descTextArtistBiography.setTextSize(20);
                 descTextArtistBiography.setTypeface(null, Typeface.BOLD);
 
-
             }
         });
 
@@ -172,8 +171,6 @@ public class DetailsActivity extends AppCompatActivity  {
                 descTextProductionContext.setAllCaps(true);
                 descTextProductionContext.setTextSize(20);
                 descTextProductionContext.setTypeface(null, Typeface.BOLD);
-
-
 
             }
         });
@@ -238,8 +235,6 @@ public class DetailsActivity extends AppCompatActivity  {
                 }
         );
     }
-
-
 
     public void goToImageDetails(View view){
         Intent imageDetailsIntent = new Intent(this, ImageDetailsActivity.class);

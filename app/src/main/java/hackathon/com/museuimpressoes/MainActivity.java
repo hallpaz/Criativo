@@ -28,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
         Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
         startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
 
+        MuseumApplication myApp = (MuseumApplication) getApplication();
+        myApp.startBeacons();
+
     }
 
     public void goToGallery(View view){
         Intent galleryIntent = new Intent(this, PieceGalleryActivity.class);
+        galleryIntent.putExtra("panelName", "Varejão");
         startActivity(galleryIntent);
     }
 
@@ -43,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
     public void goToLogin(View view){
         Log.d(TAG, "socorro");
 
-        Intent loginIntent = new Intent(this, LoginActivity.class);
+        Intent loginIntent = new Intent(this, CommentsActivity.class);
+        loginIntent.putExtra(CommentsActivity.COMMENTWork, "test_work");
         startActivity(loginIntent);
     }
 

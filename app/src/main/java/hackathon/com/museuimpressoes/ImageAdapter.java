@@ -49,7 +49,7 @@ public class ImageAdapter extends BaseAdapter {
         imageList = new Vector<ParseFile>();
         query = ParseQuery.getQuery("WorkThumb");
         query.whereEqualTo("panel", panelName);
-        try {
+        /*try {
             List<ParseObject> list = query.find();
             for (int i = 0; i < list.size(); ++i){
                 imageList.add(list.get(i).getParseFile("image")) ;
@@ -58,14 +58,16 @@ public class ImageAdapter extends BaseAdapter {
 
         } catch (com.parse.ParseException e) {
             e.printStackTrace();
-        }
-        /*query.findInBackground(new FindCallback<ParseObject>() {
+        }*/
+        
+        query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, com.parse.ParseException e) {
                 if (e == null) {
                     //imageList = (list.get(0)).getParseFile();
                     for (int i = 0; i < list.size(); ++i){
                         imageList.add(list.get(i).getParseFile("image")) ;
+                        notifyDataSetChanged();
                         Log.d(TAG, "opa");
                     }
                     Log.d("score", "Retrieved " + list.size() + " IMAGES");
@@ -73,7 +75,7 @@ public class ImageAdapter extends BaseAdapter {
                     Log.d("score", "Error: " + e.getMessage());
                 }
             }
-        });*/
+        });
 
     }
 
