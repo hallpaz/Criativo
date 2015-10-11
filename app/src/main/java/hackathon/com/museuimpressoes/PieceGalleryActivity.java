@@ -30,7 +30,7 @@ public class PieceGalleryActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_piece_gallery);
 
         imageGrid = (GridView) findViewById(R.id.imageGrid);
-        imageGrid.setAdapter(new ImageAdapter(this));
+        imageGrid.setAdapter(new ImageAdapter(this, "test_panel"));
 
         imageGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
