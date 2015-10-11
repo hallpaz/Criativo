@@ -5,4 +5,15 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="edit_text_background">#fff</color>
+    <color name="edit_text_text_color">#2d2c25</color>
+    <color name="edit_text_hint_color">#c3cdd6</color>
+    <color name="login_icon_background_color">#227fc0</color>
+    <color name="login_button_backgrond_color">#fff</color>
+    <color name="button_text_color">#2d2c25</color>
+
+    <color name="other_button_backgrond_color">#fff</color>
+    <color name="other_button_backgrond_color_pressed">#c3cdd6</color>
+    <color name="other_button_stroke_color_focused">#c3cdd6</color>
 </resources>

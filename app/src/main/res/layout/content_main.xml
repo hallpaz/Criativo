@@ -31,4 +31,11 @@
         android:layout_height="wrap_content"
         android:onClick="askConfirmation"/>
 
+    <Button
+        android:id="@+id/loginActivity"
+        android:text="Ir para Login"
+        android:layout_below="@id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToLogin"/>
 </RelativeLayout>
