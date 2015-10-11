@@ -22,15 +22,21 @@
             android:value="@string/Facebook_App_ID" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".DispatchActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
         <activity
             android:name=".DetailsActivity"
             android:label="@string/title_activity_details"
@@ -58,6 +64,11 @@
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity android:name=".SignUpActivity"
+            android:label="@string/tittle_activity_signup"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
     </application>
 
 </manifest>

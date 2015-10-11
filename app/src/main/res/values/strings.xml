@@ -18,6 +18,7 @@
 
     <string name="submit_rating_button">Avaliar</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="tittle_activity_signup">Sign Up</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -37,6 +38,24 @@
     <string name="signin">Sign In</string>
     <string name="logout">Logout</string>
     <string name="forgot_password"><u>Esqueceu sua senha?</u></string>
+    <string name="progress_signup">Um momento, por favor</string>
 
+
+
+    <string name="error_intro">"Por favor, "</string>
+    <string name="error_blank_username">digite seu nome</string>
+    <string name="error_blank_phone">digite seu telefone</string>
+    <string name="error_blank_email">digite seu email</string>
+    <string name="error_blank_password">digite uma senha</string>
+    <string name="error_mismatched_passwords">digite a MESMA senha 2 vezes</string>
+    <string name="error_join">", e "</string>
+    <string name="error_end">.</string>
+
+
+    <string name="prompt_name">Nome</string>
+    <string name="prompt_phone">Celular</string>
+    <string name="prompt_password_again">Repita a senha</string>
+    <string name="prompt_contact_username">Email do seu contato</string>
+    <string name="prompt_header">Bem Vindo! Vamos começar! </string>
 
 </resources>
