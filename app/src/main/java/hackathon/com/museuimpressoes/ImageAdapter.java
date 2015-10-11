@@ -59,6 +59,7 @@ public class ImageAdapter extends BaseAdapter {
         } catch (com.parse.ParseException e) {
             e.printStackTrace();
         }*/
+        
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, com.parse.ParseException e) {
