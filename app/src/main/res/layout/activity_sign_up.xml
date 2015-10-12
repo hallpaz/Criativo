@@ -1,13 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools" >
-
+    xmlns:tools="http://schemas.android.com/tools" >
 
 <!--Signup form -->
 
 <ScrollView
     android:id="@+id/signup_form"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@color/activity_signup_background_color">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -120,7 +121,6 @@ xmlns:tools="http://schemas.android.com/tools" >
             android:textColor="@color/button_text_color"
             android:background="@drawable/login_button"
             android:text="@string/signup"
-            android:fontFamily="sans-serif-condensed"
             android:onClick="signup"/>
 
     </RelativeLayout>

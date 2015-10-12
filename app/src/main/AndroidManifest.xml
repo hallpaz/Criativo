@@ -69,6 +69,10 @@
         </activity>
         <activity android:name=".CommentsActivity" >
         </activity>
+
+        <activity android:name=".ChooseGalleryActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

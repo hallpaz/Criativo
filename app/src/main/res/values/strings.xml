@@ -72,4 +72,10 @@
     <string name="prompt_contact_username">Email do seu contato</string>
     <string name="prompt_header">Bem Vindo! Vamos começar! </string>
 
+    <string name="activity_main_textview">Para utilizar o aplicativo <b>sem os beacons</b> toque na logo acima</string>
+
+    <string name="hackathon_footer"> "@Hackathon Sesi Cultura Digital 2015"</string>
+
+    <string name="gallery1_textview">Galeria Adriana Varejão</string>
+    <string name="gallery2_textview">Galeria São Sebastião</string>
 </resources>
