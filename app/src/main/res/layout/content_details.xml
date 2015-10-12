@@ -21,12 +21,22 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="60dp"/>
+
+    <TextView android:id="@+id/section_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section_title"
+        android:text="Artista: Andréia Varejão"
+        android:textSize="20sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="@dimen/text_margin"/>
+
     <TextView android:id="@+id/section_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="@dimen/text_margin"
-        android:layout_below="@id/section_title"
+        android:layout_below="@id/section_author"
         android:text="Ano: 1992 - 2004"
         android:textSize="20sp"/>
     <TextView android:id="@+id/section_collection"
@@ -45,7 +55,7 @@
         android:layout_marginTop="@dimen/text_margin"
         android:layout_marginBottom="@dimen/text_margin"
         android:layout_below="@id/section_collection"
-        android:text="Técnica: Olho sobre Madeira e Linha de Saturação"
+        android:text="Técnica: Óleo sobre Madeira e Linha de Saturação"
         android:textSize="20sp"/>
 
     <View
