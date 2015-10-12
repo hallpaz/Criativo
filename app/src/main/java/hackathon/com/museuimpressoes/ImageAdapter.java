@@ -32,7 +32,10 @@ public class ImageAdapter extends BaseAdapter {
     private Vector<ParseFile> imageList;
 
     private Integer[] varejaoIDs = {
-        R.drawable.varejao1, R.drawable.varejao2, R.drawable.varejao3
+            R.drawable.varejao1, R.drawable.varejao2, R.drawable.varejao3,
+            R.drawable.varejao2, R.drawable.varejao3, R.drawable.varejao1,
+            R.drawable.varejao3, R.drawable.varejao1, R.drawable.varejao2,
+            R.drawable.varejao1, R.drawable.varejao2, R.drawable.varejao3,
     };
     private Integer[] sebastiaoIDs = {
             R.drawable.sebastiao1, R.drawable.sebastiao2, R.drawable.sebastiao3,
