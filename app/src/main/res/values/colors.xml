@@ -28,5 +28,6 @@
     <color name="header_background_color">#227fc0</color>
 
     <color name="hackathon_footer_color">#000</color>
+    <color name="choose_gallery_button_color">#000</color>
 
 </resources>

@@ -16,7 +16,7 @@
         android:background="@drawable/mar"
         android:padding="6dp"
         android:clickable="true"
-        android:onClick="goToDetails"
+        android:onClick="goToChooseGallery"
         />
 
     <TextView

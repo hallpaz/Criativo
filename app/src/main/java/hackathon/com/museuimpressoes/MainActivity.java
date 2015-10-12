@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(galleryIntent);
     }
 
+    public void goToChooseGallery(View view){
+        Intent chooseGalleryIntent = new Intent(this, ChooseGalleryActivity.class);
+        startActivity(chooseGalleryIntent);
+    }
+
     public void goToLogin(View view){
         Log.d(TAG, "socorro");
 
