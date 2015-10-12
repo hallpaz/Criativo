@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class PieceGalleryActivity extends AppCompatActivity implements View.OnClickListener {
+public class PieceGalleryActivity extends AppCompatActivity  {
     private final String TAG = "PieceGallery";
     public static final String PANELExtra = "panelName";
 
@@ -41,8 +41,6 @@ public class PieceGalleryActivity extends AppCompatActivity implements View.OnCl
         imageGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                Toast.makeText(PieceGalleryActivity.this, "" + position,
-                        Toast.LENGTH_SHORT).show();
                 Intent detailsIntent = new Intent(PieceGalleryActivity.this, DetailsActivity.class);
                 startActivity(detailsIntent);
             }
@@ -50,12 +48,5 @@ public class PieceGalleryActivity extends AppCompatActivity implements View.OnCl
 
     }
 
-    public void onClick(View view){
-        showPieceDetails();
-    }
-
-    public void showPieceDetails(){
-        Log.d(TAG, "Should be showing details");
-    }
 
 }

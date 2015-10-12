@@ -12,6 +12,12 @@
 
     <string name="title_activity_piece_gallery">Galeria de Obras</string>
 
+    <!--Panels name -->
+    <string name="panel_varejao">Varejão</string>
+    <string name="panel_sao_sebastiao">São Sebastião</string>
+
+
+    <!-- Data for sample details activity -->
     <string name="artist_biography_title">Biografia do Artista</string>
     <string name="artist_biography_text">
         "ADRIANA VAREJÃO"\n

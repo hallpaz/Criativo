@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToGallery(View view){
         Intent galleryIntent = new Intent(this, PieceGalleryActivity.class);
-        galleryIntent.putExtra("panelName", "Varejão");
+        galleryIntent.putExtra("panelName", "São Sebastião");
         startActivity(galleryIntent);
     }
 
