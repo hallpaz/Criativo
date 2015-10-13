@@ -179,17 +179,17 @@
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_below="@id/artist_biography_video"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="40dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="Contribuir com este conteúdo"
+        android:text="Quero acrescentar conteúdo"
         android:background="@drawable/contribute_button"
         android:textColor="#000"
         android:textSize="12sp"
         android:textAllCaps="false"
-        android:visibility="invisible"/>
+       />
 
 
     <View
@@ -286,17 +286,17 @@
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_below="@id/production_context_video"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="40dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="Contribuir com este conteúdo"
+        android:text="Quero acrescentar conteúdo"
         android:background="@drawable/contribute_button"
         android:textColor="#000"
         android:textSize="12sp"
         android:textAllCaps="false"
-        android:visibility="invisible"/>
+        />
 
     <View
         android:id="@+id/view2_production_context_text"
