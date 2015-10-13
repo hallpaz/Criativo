@@ -150,7 +150,6 @@
                 android:layout_marginRight="75dp"
                 android:layout_below="@id/or"
                 android:background="@drawable/button_login_facebook"
-                android:onClick="login"
                  />
 
             <TextView

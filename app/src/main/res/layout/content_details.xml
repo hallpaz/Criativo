@@ -255,9 +255,9 @@
         android:textAllCaps="true"/>
 
     <EditText
-        android:id="@+id/comentários"
+        android:id="@+id/comments"
         android:layout_width="match_parent"
-        android:layout_height="200sp"
+        android:layout_height="160sp"
         android:layout_below="@id/text_comment"
         android:hint="Dê sua opinião"
         android:maxLines="1"
@@ -269,6 +269,15 @@
         android:padding="10dp"
 
         />
+    <Button
+        android:id="@+id/more_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comments"
+        android:text="Ver todos os comentários"
+        android:onClick="showComments"
+        android:background="@drawable/rate_button"
+        android:textColor="#fff"/>
 
 
 </RelativeLayout>

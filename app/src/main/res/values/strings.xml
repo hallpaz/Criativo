@@ -9,6 +9,7 @@
     <string name="title_activity_teste">TesteActivity</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="title_activity_image_details">ImageDetailsActivity</string>
+    <string name="title_activity_comments">Comentários</string>
 
     <string name="title_activity_piece_gallery">Galeria de Obras</string>
 
@@ -78,4 +79,15 @@
 
     <string name="gallery1_textview">Galeria Adriana Varejão</string>
     <string name="gallery2_textview">Galeria São Sebastião</string>
+
+
+
+    <!-- Hardcoded sample comments -->
+    <string name="hallpaz_comment"> Ainda bem que existe esse app, impossível ver esta obra e não querer comentar.</string>
+    <string name="kizzy_comment"> Essa obra é muuuuuito maneira! E esse app é um barato!</string>
+    <string name="rubens_comment"> Obra de grande influência para os artistas contemporâneos</string>
+    <string name="tatiana_comment"> Ainda bem que existe esse app, impossível ver esta obra e não querer comentar</string>
+    <string name="patricia_comment"> Essa obra é muuuuuito maneira!</string>
+    <string name="fulano_comment"> Obra de grande influência para os artistas contemporâneos</string>
+
 </resources>

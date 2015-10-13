@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "socorro");
 
         Intent loginIntent = new Intent(this, CommentsActivity.class);
-        loginIntent.putExtra(CommentsActivity.COMMENTWork, "test_work");
+        //loginIntent.putExtra(CommentsActivity.COMMENTWork, "test_work");
         startActivity(loginIntent);
     }
 

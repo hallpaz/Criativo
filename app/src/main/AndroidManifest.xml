@@ -25,11 +25,6 @@
             android:name=".DispatchActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
@@ -56,6 +51,11 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -67,7 +67,9 @@
             android:label="@string/tittle_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".CommentsActivity" >
+        <activity
+            android:name=".CommentsActivity"
+            android:label="tittle_activity_comments"        >
         </activity>
 
         <activity android:name=".ChooseGalleryActivity"

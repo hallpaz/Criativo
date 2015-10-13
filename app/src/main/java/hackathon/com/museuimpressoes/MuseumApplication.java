@@ -1,6 +1,5 @@
 package hackathon.com.museuimpressoes;
 
-import android.app.AlertDialog;
 import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,10 +11,6 @@ import com.estimote.sdk.Beacon;
 import com.estimote.sdk.BeaconManager;
 import com.estimote.sdk.Region;
 import com.estimote.sdk.Utils;
-import com.parse.Parse;
-import com.parse.ParseInstallation;
-import com.parse.ParseFacebookUtils;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -23,6 +18,10 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
+
+import com.parse.Parse;
+import com.parse.ParseInstallation;
+import com.parse.ParseFacebookUtils;
 
 /**
  * Created by hallpaz on 11/10/2015.
@@ -44,8 +43,6 @@ public class MuseumApplication extends Application {
 
     enum activeBeacons{ MainBeacon, SecondaryBeacon, INVALID }
 
-    /*private final int MAJOR_range = 22504;
-    private final int MINOR_range = 48827;*/
     private Region expositionRegion;
 
     @Override
@@ -54,27 +51,13 @@ public class MuseumApplication extends Application {
 
         beaconManager = new BeaconManager(getApplicationContext());
 
-
-        beaconManager = new BeaconManager(getApplicationContext());
-        //beaconManager.setMonitoringListener(new MuseumBeaconMonitoringListener());
         beaconManager.setRangingListener(new MuseumBeaconRangingListener());
         expositionRegion = new Region("Exposition", UUID.fromString(mainBeaconUUID), null, null);
 
-       /* beaconManager.connect(new BeaconManager.ServiceReadyCallback() {
-            @Override
-            public void onServiceReady() {
-                beaconManager.startMonitoring(new Region(
-                        "monitored region",
-                        UUID.fromString(mainBeaconUUID),
-                        MAJOR_range, MINOR_range));
-            }
-        });*/
 
-        Parse.initialize(this, getResources().getString(R.string.Parse_Application_ID), getResources().getString(R.string.Parse_Client_Key));
+        /*Parse.initialize(this, getResources().getString(R.string.Parse_Application_ID), getResources().getString(R.string.Parse_Client_Key));
         ParseFacebookUtils.initialize(getApplicationContext());
-        ParseInstallation.getCurrentInstallation().saveInBackground();
-
-
+        ParseInstallation.getCurrentInstallation().saveInBackground();*/
     }
 
 
@@ -151,13 +134,14 @@ public class MuseumApplication extends Application {
             }
         }
 
-        public void askConfirmation(int beaconID){
+    }
+
+    /*public void askConfirmation(int beaconID){
             AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
             builder.setMessage("Are you sure you want to change to beacon ?")
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            //finish();
                             dialog.cancel();
                         }
                     })
@@ -168,25 +152,6 @@ public class MuseumApplication extends Application {
                     });
             AlertDialog alert = builder.create();
             alert.show();
-        }
+        }*/
 
-    }
-
-    private class MuseumBeaconMonitoringListener implements BeaconManager.MonitoringListener{
-
-        @Override
-        public void onEnteredRegion(Region region, List<Beacon> list) {
-            Intent galleryIntent = new Intent(getApplicationContext(), PieceGalleryActivity.class);
-            galleryIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(galleryIntent);
-        }
-
-        @Override
-        public void onExitedRegion(Region region) {
-            Intent idleIntent = new Intent(getApplicationContext(), MainActivity.class);
-            idleIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(idleIntent);
-        }
-
-    }
 }

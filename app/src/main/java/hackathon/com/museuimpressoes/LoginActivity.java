@@ -40,7 +40,8 @@ public class LoginActivity extends AppCompatActivity {
 
         SignInFacebookButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                LoginActivity.this.progressDialog = ProgressDialog.show(
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                /*LoginActivity.this.progressDialog = ProgressDialog.show(
                         LoginActivity.this, "", "Logging in...", true);
                 List<String> permissions = Arrays.asList("public_profile",
                         "user_birthday", "user_location");
@@ -58,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
 
-                });
+                });*/
             }
         });
     }
@@ -72,7 +73,9 @@ public class LoginActivity extends AppCompatActivity {
         EditText emailEditText = (EditText) findViewById(R.id.login_email);
         EditText passwordEditText = (EditText) findViewById(R.id.login_password);
 
-        ParseUser.logInInBackground(emailEditText.getText().toString(),
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+
+        /*ParseUser.logInInBackground(emailEditText.getText().toString(),
                 passwordEditText.getText().toString(), new LogInCallback() {
                     @Override
                     public void done(ParseUser user, com.parse.ParseException e) {
@@ -87,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(intent);
                         }
                     }
-                });
+                });*/
     }
 
     public void gotosignup(View view){

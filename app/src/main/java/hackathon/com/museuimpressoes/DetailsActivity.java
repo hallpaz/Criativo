@@ -31,6 +31,11 @@ public class DetailsActivity extends AppCompatActivity  {
     ImageButton fab, fab_stop;
     MediaPlayer description_audio, productionContext_audio, artistBiographyText_audio;
 
+    public void showComments(View view){
+        Intent commentsIntent = new Intent(this, CommentsActivity.class);
+        startActivity(commentsIntent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
