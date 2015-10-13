@@ -20,7 +20,7 @@ import java.util.logging.LogRecord;
 
 
 public class DetailsActivity extends AppCompatActivity  {
-    TextView descTextArtistBiography, videoArtistBiography;
+    TextView descTextArtistBiography, videoArtistBiography, videoProductionContext, videoDescription;
     ImageButton showArtistBiography, hideArtistBiography;
 
     TextView descTextProductionContext;
@@ -70,7 +70,36 @@ public class DetailsActivity extends AppCompatActivity  {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        startActivity(new Intent(DetailsActivity.this, VideoActivity.class));
+
+                        Intent videoIntent = new Intent(DetailsActivity.this, VideoBiographyActivity.class);
+                        startActivity(videoIntent);
+
+                    }
+                }
+        );
+
+        videoProductionContext = (TextView) findViewById(R.id.production_context_video);
+        videoProductionContext.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent videoIntent = new Intent(DetailsActivity.this, VideoContextActivity.class);
+                        startActivity(videoIntent);
+
+                    }
+                }
+        );
+
+        videoDescription = (TextView) findViewById(R.id.description_video);
+        videoDescription.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent videoIntent = new Intent(DetailsActivity.this, VideoDescriptionActivity.class);
+                        startActivity(videoIntent);
+
                     }
                 }
         );
@@ -162,16 +191,9 @@ public class DetailsActivity extends AppCompatActivity  {
 
 
 
-        final String productionContextText = " \"A material metaphor is the unifying theory of a rationalized space and a system of motion.\"\n" +
-                "        \"The material is grounded in tactile reality, inspired by the study of paper and ink, yet \"\n" +
-                "        \"technologically advanced and open to imagination and magic.\\n\"\n" +
-                "        \"Surfaces and edges of the material provide visual cues that are grounded in reality. The \"\n" +
-                "        \"use of familiar tactile attributes helps users quickly understand affordances. Yet the \"\n" +
-                "        \"flexibility of the material creates new affordances that supercede those in the physical \"\n" +
-                "        \"world, without breaking the rules of physics.\\n\"\n" +
-                "        \"The fundamentals of light, surface, and movement are key to conveying how objects move, \"\n" +
-                "        \"interact, and exist in space and in relation to each other. Realistic lighting shows \"\n" +
-                "        \"seams, divides space, and indicates moving parts.\\n\\n\"\n";
+        final String productionContextText = " A obra Mapa de Lopo Homem II faz parte da série Terra Incógnita, iniciada em 1992. Ela representa um mapa baseado nos estudos do cartógrafo português Lopo Homem. Ele acreditava existir um pedaço de terra que unia as Américas e a Ásia, que ele denominou como Mundus Novus. O Brasil foi parte do que ele traçou em seu mapa de 1519 como Mundus Novus Brasil.\n" +
+                "\n" +
+                "Por meio de materiais e narrativa histórica, o corte sangrento que atravessa o centro da pintura Mapa de Lopo Homem II representam a violência que se esconde entre as versões da colonização da América.";
 
         descTextProductionContext = (TextView) findViewById(R.id.production_context_text);
         showProductionContext = (ImageButton) findViewById(R.id.show_production_context_text);
@@ -182,7 +204,7 @@ public class DetailsActivity extends AppCompatActivity  {
                 System.out.println("Show button");
                 showProductionContext.setVisibility(View.INVISIBLE);
                 hideProductionContext.setVisibility(View.VISIBLE);
-
+                videoProductionContext.setVisibility(View.VISIBLE);
                 playProductionContext.setVisibility(View.VISIBLE);
                 descTextProductionContext.setMaxLines(Integer.MAX_VALUE);
                 descTextProductionContext.setText(productionContextText);
