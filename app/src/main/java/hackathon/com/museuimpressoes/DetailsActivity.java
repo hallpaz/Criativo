@@ -9,6 +9,7 @@ import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -22,10 +23,10 @@ import java.util.logging.LogRecord;
 public class DetailsActivity extends AppCompatActivity  {
     TextView descTextArtistBiography, videoArtistBiography, videoProductionContext, videoDescription;
     ImageButton showArtistBiography, hideArtistBiography;
-
     TextView descTextProductionContext;
     ImageButton showProductionContext, hideProductionContext, playProductionContext, stopProductionContext, playArtistBiographyText, stopArtistBiographyText;
     ImageButton fab, fab_stop, playBasicData, stopBasicData;
+    Button contribute_biography, contribute_production_context;
     MediaPlayer description_audio, productionContext_audio, artistBiographyText_audio, basicData_audio;
 
     public void showComments(View view){
@@ -39,6 +40,7 @@ public class DetailsActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_details);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         basicData_audio = MediaPlayer.create(DetailsActivity.this, R.raw.baisc_data);
         description_audio = MediaPlayer.create(DetailsActivity.this, R.raw.description_audio);
         productionContext_audio = MediaPlayer.create(DetailsActivity.this, R.raw.context_audio);
@@ -149,7 +151,7 @@ public class DetailsActivity extends AppCompatActivity  {
                 "\n" +
                 "Em sua produção, evoca repertório de imagens associadas à história do período colonial brasileiro, como azulejos e mapas. Apesar de remeter ao barroco, adquire forte contemporaneidade em decorrência do acúmulo excessivo de materiais, camadas de tinta e informações. Em obras que se situam entre a pintura e o relevo, freqüentemente emprega cortes e suturas em telas e outros suportes que permitem entrever materiais internos que imitam o aspecto de carne. ";
 
-
+        contribute_biography =  (Button) findViewById(R.id.btn_contribute_artist_biography_text);
         descTextArtistBiography = (TextView) findViewById(R.id.artist_biography_text);
         showArtistBiography = (ImageButton) findViewById(R.id.show_artist_biography_text);
         showArtistBiography.setOnClickListener(new View.OnClickListener() {
@@ -159,6 +161,7 @@ public class DetailsActivity extends AppCompatActivity  {
                 System.out.println("Show button");
                 showArtistBiography.setVisibility(View.INVISIBLE);
                 hideArtistBiography.setVisibility(View.VISIBLE);
+                contribute_biography.setVisibility(View.VISIBLE);
                 playArtistBiographyText.setVisibility(View.VISIBLE);
                 videoArtistBiography.setVisibility(View.VISIBLE);
                 descTextArtistBiography.setMaxLines(Integer.MAX_VALUE);
@@ -178,6 +181,7 @@ public class DetailsActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 System.out.println("Hide button");
                 hideArtistBiography.setVisibility(View.INVISIBLE);
+                contribute_biography.setVisibility(View.INVISIBLE);
                 playArtistBiographyText.setVisibility(View.INVISIBLE);
                 showArtistBiography.setVisibility(View.VISIBLE);
                 descTextArtistBiography.setMaxLines(1);
@@ -195,6 +199,7 @@ public class DetailsActivity extends AppCompatActivity  {
                 "\n" +
                 "Por meio de materiais e narrativa histórica, o corte sangrento que atravessa o centro da pintura Mapa de Lopo Homem II representam a violência que se esconde entre as versões da colonização da América.";
 
+        contribute_production_context = (Button) findViewById(R.id.btn_contribute_production_context_text);
         descTextProductionContext = (TextView) findViewById(R.id.production_context_text);
         showProductionContext = (ImageButton) findViewById(R.id.show_production_context_text);
         showProductionContext.setOnClickListener(new View.OnClickListener() {
@@ -204,6 +209,7 @@ public class DetailsActivity extends AppCompatActivity  {
                 System.out.println("Show button");
                 showProductionContext.setVisibility(View.INVISIBLE);
                 hideProductionContext.setVisibility(View.VISIBLE);
+                contribute_production_context.setVisibility(View.VISIBLE);
                 videoProductionContext.setVisibility(View.VISIBLE);
                 playProductionContext.setVisibility(View.VISIBLE);
                 descTextProductionContext.setMaxLines(Integer.MAX_VALUE);
@@ -223,6 +229,7 @@ public class DetailsActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 System.out.println("Hide button");
                 hideProductionContext.setVisibility(View.INVISIBLE);
+                contribute_production_context.setVisibility(View.INVISIBLE);
                 playProductionContext.setVisibility(View.INVISIBLE);
                 showProductionContext.setVisibility(View.VISIBLE);
                 descTextProductionContext.setMaxLines(1);

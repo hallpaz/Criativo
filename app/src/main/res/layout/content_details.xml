@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mapa de Lopo Homem II - Série Terra Incógnita"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="16dp"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/section_title"
         android:text="Artista: Adriana Varejão"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="@dimen/text_margin"/>
 
@@ -38,7 +38,7 @@
         android:layout_marginBottom="@dimen/text_margin"
         android:layout_below="@id/section_author"
         android:text="Ano: 1992 - 2004"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView android:id="@+id/section_collection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_marginBottom="@dimen/text_margin"
         android:layout_below="@id/section_year"
         android:text="Coleção: Particular/Adriana Varejão"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView android:id="@+id/section_techinique"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         android:layout_marginBottom="@dimen/text_margin"
         android:layout_below="@id/section_collection"
         android:text="Técnica: Óleo sobre Madeira e Linha de Saturação"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
     <ImageButton
         android:id="@+id/play_basic_data"
@@ -85,8 +85,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/section_techinique"
         android:text="@string/watch_desciption_video"
-        android:layout_marginLeft="25dp"
-        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
         android:textColor="@color/watch_video"
         android:clickable="true"
         android:layout_marginTop="10dp"
@@ -96,7 +96,7 @@
         android:id="@+id/view1_artist_biography_text"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:layout_below="@id/play_basic_data"
+        android:layout_below="@id/description_video"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:background="#bfbfbf" />
@@ -174,12 +174,29 @@
         android:clickable="true"
         android:visibility="invisible" />
 
+    <Button
+        android:id="@+id/btn_contribute_artist_biography_text"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/artist_biography_video"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Contribuir com este conteúdo"
+        android:background="@drawable/contribute_button"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:visibility="invisible"/>
+
 
     <View
         android:id="@+id/view2_artist_biography_text"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:layout_below="@id/artist_biography_video"
+        android:layout_below="@id/btn_contribute_artist_biography_text"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:background="#bfbfbf" />
@@ -240,6 +257,7 @@
     android:clickable="true"
     android:visibility="invisible" />
 
+
     <ImageButton
         android:id="@+id/video_production_context_text"
         android:layout_width="40sp"
@@ -263,12 +281,28 @@
         android:layout_marginTop="10dp"
         />
 
+    <Button
+        android:id="@+id/btn_contribute_production_context_text"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/production_context_video"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Contribuir com este conteúdo"
+        android:background="@drawable/contribute_button"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:visibility="invisible"/>
 
     <View
         android:id="@+id/view2_production_context_text"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:layout_below="@id/production_context_video"
+        android:layout_below="@id/btn_contribute_production_context_text"
         android:layout_marginTop="15dp"
         android:background="#bfbfbf" />
     <RatingBar
