@@ -48,13 +48,11 @@ public class SignUpActivity extends Activity {
 
     public void signup(View view){
         EditText nameEditText = (EditText) findViewById(R.id.username_edit_text);
-        //EditText phoneEditText = (EditText) findViewById(R.id.phone_edit_text);
         EditText emailEditText = (EditText) findViewById(R.id.email_edit_text);
         EditText passwordEditText = (EditText) findViewById(R.id.password_edit_text);
         EditText passwordAgainEditText = (EditText) findViewById(R.id.password_again_edit_text);
 
         String name = nameEditText.getText().toString().trim();
-        //String phone = phoneEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         String passwordAgain = passwordAgainEditText.getText().toString().trim();
@@ -66,10 +64,6 @@ public class SignUpActivity extends Activity {
             validationErrorMessage.append(getString(R.string.error_blank_username));
         }
 
-        /*if (phone.length() == 0) {
-            validationError = true;
-            validationErrorMessage.append(getString(R.string.error_blank_phone));
-        }*/
 
         if (email.length() == 0) {
             if (validationError) {
@@ -106,8 +100,12 @@ public class SignUpActivity extends Activity {
         dialog.setMessage(getString(R.string.progress_signup));
         dialog.show();
 
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+
         // Set up a new Parse user
-        ParseUser user = new ParseUser();
+        /*ParseUser user = new ParseUser();
         user.setUsername(email);
         user.setPassword(password);
         user.put("name", name);
@@ -129,6 +127,6 @@ public class SignUpActivity extends Activity {
                     startActivity(intent);
                 }
             }
-        });
+        });*/
     }
 }

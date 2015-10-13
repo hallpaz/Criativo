@@ -69,7 +69,7 @@
         </activity>
         <activity
             android:name=".CommentsActivity"
-            android:label="tittle_activity_comments"        >
+            android:label="@string/title_activity_comments"  >
         </activity>
         <activity
             android:name=".ChooseGalleryActivity"

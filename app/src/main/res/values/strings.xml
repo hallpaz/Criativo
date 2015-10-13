@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Museu Impressoes</string>
-    <string name="Parse_Application_ID">pD0cu9eKCZicX0sxLnZVeZFeUfogDhPwIzfmAQRP</string>
-    <string name="Parse_Client_Key">eAlRyF8pUeVtNyow2XMMiBHRMwOQengkkKsLcptI</string>
+    <string name="Parse_Application_ID">pD0cu9eKCZicXXXXnZVeZFeUfogDhPwIzfmAQRP</string>
+    <string name="Parse_Client_Key">eAlRyF8pUeVtNyowXXXXiBHRMwOQengkkKsLcptI</string>
     <string name="Facebook_App_ID">1725315854363188</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_details"></string>
@@ -86,12 +86,12 @@
 
 
     <!-- Hardcoded sample comments -->
-    <string name="hallpaz_comment"> Ainda bem que existe esse app, impossível ver esta obra e não querer comentar.</string>
-    <string name="kizzy_comment"> Essa obra é muuuuuito maneira! E esse app é um barato!</string>
-    <string name="rubens_comment"> Obra de grande influência para os artistas contemporâneos</string>
-    <string name="tatiana_comment"> Ainda bem que existe esse app, impossível ver esta obra e não querer comentar</string>
-    <string name="patricia_comment"> Essa obra é muuuuuito maneira!</string>
-    <string name="fulano_comment"> Obra de grande influência para os artistas contemporâneos</string>
+    <string name="hallpaz_comment">Ainda bem que existe esse app, impossível ver esta obra e não querer comentar.</string>
+    <string name="kizzy_comment">Essa obra é muuuuuito maneira! E esse app é um barato!</string>
+    <string name="rubens_comment">Obra de grande influência para os artistas contemporâneos</string>
+    <string name="tatiana_comment">Obra bem sensível. Nunca tinha percebido essas influências nela.</string>
+    <string name="patricia_comment">Obra forte e carregada de crítica! Varejão não decepciona! &lt;3 </string>
+    <string name="fulano_comment">Obra de grande influência para os artistas contemporâneos</string>
 
 
 
