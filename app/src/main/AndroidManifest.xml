@@ -69,17 +69,23 @@
         </activity>
         <activity
             android:name=".CommentsActivity"
-            android:label="tittle_activity_comments"        >
+            android:label="tittle_activity_comments" >
         </activity>
         <activity
             android:name=".ChooseGalleryActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".VideoActivity"
+            android:name=".VideoBiographyActivity"
             android:label="@string/title_activity_video"
             android:theme="@style/AppTheme.NoActionBar" >
-
+        </activity>
+        <activity
+            android:name=".VideoContextActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".VideoDescriptionActivity"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

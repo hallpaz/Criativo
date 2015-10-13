@@ -79,7 +79,18 @@
         android:clickable="true"
         android:visibility="invisible"
          />
-
+    <TextView
+        android:id="@+id/description_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section_techinique"
+        android:text="@string/watch_desciption_video"
+        android:layout_marginLeft="25dp"
+        android:textSize="20sp"
+        android:textColor="@color/watch_video"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        />
 
     <View
         android:id="@+id/view1_artist_biography_text"
@@ -132,7 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/artist_biography_text"
-        android:text="@string/artist_biography_video"
+        android:text="@string/watch_video"
         android:layout_marginLeft="25dp"
         android:textSize="20sp"
         android:textColor="@color/watch_video"
@@ -203,7 +214,7 @@
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_alignParentRight="true"
-        android:layout_alignBottom="@id/production_context_text"
+        android:layout_below="@id/production_context_text"
         android:layout_marginRight="20dp"
         android:background="@android:drawable/ic_menu_close_clear_cancel"
         android:clickable="true"
@@ -212,7 +223,7 @@
         android:id="@+id/play_production_context_text"
         android:layout_width="40sp"
         android:layout_height="40sp"
-        android:layout_alignBottom="@id/production_context_text"
+        android:layout_below="@id/production_context_text"
         android:layout_toLeftOf="@id/hide_production_context_text"
         android:layout_marginRight="20dp"
         android:background="@android:drawable/ic_media_play"
@@ -222,7 +233,7 @@
     android:id="@+id/stop_production_context_text"
     android:layout_width="40sp"
     android:layout_height="40sp"
-    android:layout_alignBottom="@id/production_context_text"
+    android:layout_below="@id/production_context_text"
     android:layout_toLeftOf="@id/hide_production_context_text"
     android:layout_marginRight="20dp"
     android:background="@android:drawable/ic_media_pause"
@@ -239,13 +250,25 @@
         android:background="@android:drawable/checkbox_off_background"
         android:clickable="true"
         android:visibility="invisible" />
+    <TextView
+        android:id="@+id/production_context_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/production_context_text"
+        android:text="@string/watch_video"
+        android:layout_marginLeft="25dp"
+        android:textSize="20sp"
+        android:textColor="@color/watch_video"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        />
 
 
     <View
         android:id="@+id/view2_production_context_text"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:layout_below="@id/production_context_text"
+        android:layout_below="@id/production_context_video"
         android:layout_marginTop="15dp"
         android:background="#bfbfbf" />
     <RatingBar
@@ -300,6 +323,8 @@
         android:layout_width="match_parent"
         android:layout_height="160sp"
         android:layout_below="@id/text_comment"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="10dp"
         android:hint="Dê sua opinião"
         android:maxLines="1"
         android:background="@drawable/edit_text"
@@ -310,11 +335,24 @@
         android:padding="10dp"
 
         />
+
+    <Button
+        android:id="@+id/sent_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comments"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Enviar comentário"
+        android:background="@drawable/rate_button"
+        android:textColor="#fff"/>
+
     <Button
         android:id="@+id/more_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/comments"
+        android:layout_below="@id/sent_comments"
+        android:layout_margin="20dp"
         android:text="Ver todos os comentários"
         android:onClick="showComments"
         android:background="@drawable/rate_button"

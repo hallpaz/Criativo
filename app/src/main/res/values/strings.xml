@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Museu Impressoes</string>
+    <string name="app_name">Criativo</string>
     <string name="Parse_Application_ID">pD0cu9eKCZicX0sxLnZVeZFeUfogDhPwIzfmAQRP</string>
     <string name="Parse_Client_Key">eAlRyF8pUeVtNyow2XMMiBHRMwOQengkkKsLcptI</string>
     <string name="Facebook_App_ID">1725315854363188</string>
@@ -32,7 +32,7 @@
 
 
     <string name="submit_rating_button">Avaliar</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_login">Criativo</string>
     <string name="tittle_activity_signup">Sign Up</string>
 
     <!-- Strings related to login -->
@@ -80,7 +80,8 @@
     <string name="gallery1_textview">Galeria Adriana Varejão</string>
     <string name="gallery2_textview">Galeria São Sebastião</string>
 
-    <string name="artist_biography_video"><u>Assistir vídeo</u></string>
+    <string name="watch_video"><u>Assistir vídeo</u></string>
+    <string name="watch_desciption_video"><u>Vídeo descrição da obra</u></string>
     <string name="title_activity_video">VideoActivity</string>
 
 
