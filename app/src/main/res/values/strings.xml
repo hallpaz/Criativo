@@ -80,6 +80,9 @@
     <string name="gallery1_textview">Galeria Adriana Varejão</string>
     <string name="gallery2_textview">Galeria São Sebastião</string>
 
+    <string name="artist_biography_video"><u>Assistir vídeo</u></string>
+    <string name="title_activity_video">VideoActivity</string>
+
 
 
     <!-- Hardcoded sample comments -->
@@ -89,5 +92,7 @@
     <string name="tatiana_comment"> Ainda bem que existe esse app, impossível ver esta obra e não querer comentar</string>
     <string name="patricia_comment"> Essa obra é muuuuuito maneira!</string>
     <string name="fulano_comment"> Obra de grande influência para os artistas contemporâneos</string>
+
+
 
 </resources>

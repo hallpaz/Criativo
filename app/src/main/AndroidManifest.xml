@@ -71,9 +71,15 @@
             android:name=".CommentsActivity"
             android:label="tittle_activity_comments"        >
         </activity>
+        <activity
+            android:name=".ChooseGalleryActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_video"
+            android:theme="@style/AppTheme.NoActionBar" >
 
-        <activity android:name=".ChooseGalleryActivity"
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/section_title"
-        android:text="Artista: Andréia Varejão"
+        android:text="Artista: Adriana Varejão"
         android:textSize="20sp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="@dimen/text_margin"/>
@@ -58,11 +58,34 @@
         android:text="Técnica: Óleo sobre Madeira e Linha de Saturação"
         android:textSize="20sp"/>
 
+    <ImageButton
+        android:id="@+id/play_basic_data"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_below="@id/section_techinique"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_media_play"
+        android:clickable="true"
+         />
+    <ImageButton
+        android:id="@+id/stop_basic_data"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_below="@id/section_techinique"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/ic_media_pause"
+        android:clickable="true"
+        android:visibility="invisible"
+         />
+
+
     <View
         android:id="@+id/view1_artist_biography_text"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:layout_below="@id/section_techinique"
+        android:layout_below="@id/play_basic_data"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:background="#bfbfbf" />
@@ -86,8 +109,9 @@
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_alignParentRight="true"
-        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_below="@id/view1_artist_biography_text"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         android:background="@android:drawable/ic_menu_add"
         android:clickable="true"
         android:text="@string/artist_biography_text"/>
@@ -97,29 +121,45 @@
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_alignParentRight="true"
-        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_below="@id/artist_biography_text"
         android:layout_marginRight="20dp"
         android:background="@android:drawable/ic_menu_close_clear_cancel"
         android:clickable="true"
         android:visibility="invisible" />
+    
+    <TextView
+        android:id="@+id/artist_biography_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist_biography_text"
+        android:text="@string/artist_biography_video"
+        android:layout_marginLeft="25dp"
+        android:textSize="20sp"
+        android:textColor="@color/watch_video"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        />
+
+    
     <ImageButton
         android:id="@+id/play_artist_biography_text"
         android:layout_width="40sp"
         android:layout_height="40sp"
-        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_below="@id/artist_biography_text"
         android:layout_toLeftOf="@id/hide_artist_biography_text"
         android:layout_marginRight="20dp"
         android:background="@android:drawable/ic_media_play"
         android:clickable="true"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        />
     <ImageButton
         android:id="@+id/stop_artist_biography_text"
         android:layout_width="40sp"
         android:layout_height="40sp"
-        android:layout_alignBottom="@id/artist_biography_text"
+        android:layout_below="@id/artist_biography_text"
         android:layout_toLeftOf="@id/hide_artist_biography_text"
         android:layout_marginRight="20dp"
-        android:background="@android:drawable/checkbox_off_background"
+        android:background="@android:drawable/ic_media_pause"
         android:clickable="true"
         android:visibility="invisible" />
 
@@ -128,7 +168,7 @@
         android:id="@+id/view2_artist_biography_text"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
-        android:layout_below="@id/artist_biography_text"
+        android:layout_below="@id/artist_biography_video"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:background="#bfbfbf" />
@@ -152,8 +192,9 @@
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_alignParentRight="true"
-        android:layout_alignBottom="@id/production_context_text"
+        android:layout_below="@id/view2_artist_biography_text"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         android:background="@android:drawable/ic_menu_add"
         android:clickable="true" />
 
@@ -184,7 +225,7 @@
     android:layout_alignBottom="@id/production_context_text"
     android:layout_toLeftOf="@id/hide_production_context_text"
     android:layout_marginRight="20dp"
-    android:background="@android:drawable/checkbox_off_background"
+    android:background="@android:drawable/ic_media_pause"
     android:clickable="true"
     android:visibility="invisible" />
 

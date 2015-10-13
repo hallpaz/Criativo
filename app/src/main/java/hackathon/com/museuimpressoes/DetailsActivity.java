@@ -6,12 +6,9 @@ import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -23,13 +20,13 @@ import java.util.logging.LogRecord;
 
 
 public class DetailsActivity extends AppCompatActivity  {
-    TextView descTextArtistBiography;
+    TextView descTextArtistBiography, videoArtistBiography;
     ImageButton showArtistBiography, hideArtistBiography;
 
     TextView descTextProductionContext;
     ImageButton showProductionContext, hideProductionContext, playProductionContext, stopProductionContext, playArtistBiographyText, stopArtistBiographyText;
-    ImageButton fab, fab_stop;
-    MediaPlayer description_audio, productionContext_audio, artistBiographyText_audio;
+    ImageButton fab, fab_stop, playBasicData, stopBasicData;
+    MediaPlayer description_audio, productionContext_audio, artistBiographyText_audio, basicData_audio;
 
     public void showComments(View view){
         Intent commentsIntent = new Intent(this, CommentsActivity.class);
@@ -42,9 +39,11 @@ public class DetailsActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_details);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        basicData_audio = MediaPlayer.create(DetailsActivity.this, R.raw.baisc_data);
         description_audio = MediaPlayer.create(DetailsActivity.this, R.raw.description_audio);
         productionContext_audio = MediaPlayer.create(DetailsActivity.this, R.raw.context_audio);
         artistBiographyText_audio = MediaPlayer.create(DetailsActivity.this, R.raw.biography_audio);
+
         fab = (ImageButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,11 +60,44 @@ public class DetailsActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 description_audio.pause();  //>>pause current sound
-                description_audio.seekTo(0); //>> seek to start it again
                 fab.setVisibility(View.VISIBLE);
                 fab_stop.setVisibility(View.INVISIBLE);
             }
         });
+
+        videoArtistBiography = (TextView) findViewById(R.id.artist_biography_video);
+        videoArtistBiography.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(DetailsActivity.this, VideoActivity.class));
+                    }
+                }
+        );
+
+        playBasicData = (ImageButton) findViewById(R.id.play_basic_data);
+        playBasicData.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        basicData_audio.start();
+                        playBasicData.setVisibility(View.INVISIBLE);
+                        stopBasicData.setVisibility(View.VISIBLE);
+                    }
+                }
+        );
+
+        stopBasicData = (ImageButton) findViewById(R.id.stop_basic_data);
+        stopBasicData.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        basicData_audio.pause();
+                        playBasicData.setVisibility(View.VISIBLE);
+                        stopBasicData.setVisibility(View.INVISIBLE);
+                    }
+                }
+        );
 
         AppBarLayout bar = (AppBarLayout) findViewById(R.id.app_bar);
         bar.setOnClickListener(
@@ -98,7 +130,8 @@ public class DetailsActivity extends AppCompatActivity  {
                 System.out.println("Show button");
                 showArtistBiography.setVisibility(View.INVISIBLE);
                 hideArtistBiography.setVisibility(View.VISIBLE);
-
+                playArtistBiographyText.setVisibility(View.VISIBLE);
+                videoArtistBiography.setVisibility(View.VISIBLE);
                 descTextArtistBiography.setMaxLines(Integer.MAX_VALUE);
                 descTextArtistBiography.setText(artistBiographyText);
                 descTextArtistBiography.setAllCaps(false);
@@ -116,7 +149,7 @@ public class DetailsActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 System.out.println("Hide button");
                 hideArtistBiography.setVisibility(View.INVISIBLE);
-
+                playArtistBiographyText.setVisibility(View.INVISIBLE);
                 showArtistBiography.setVisibility(View.VISIBLE);
                 descTextArtistBiography.setMaxLines(1);
                 descTextArtistBiography.setText(R.string.artist_biography_title);
@@ -168,7 +201,6 @@ public class DetailsActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 System.out.println("Hide button");
                 hideProductionContext.setVisibility(View.INVISIBLE);
-
                 playProductionContext.setVisibility(View.INVISIBLE);
                 showProductionContext.setVisibility(View.VISIBLE);
                 descTextProductionContext.setMaxLines(1);
@@ -202,7 +234,6 @@ public class DetailsActivity extends AppCompatActivity  {
                     @Override
                     public void onClick(View v) {
                         productionContext_audio.pause();  //>>pause current sound
-                        productionContext_audio.seekTo(0); //>> seek to start it again
                         playProductionContext.setVisibility(View.VISIBLE);
                         stopProductionContext.setVisibility(View.INVISIBLE);
                     }
@@ -233,7 +264,6 @@ public class DetailsActivity extends AppCompatActivity  {
                     @Override
                     public void onClick(View v) {
                         artistBiographyText_audio.pause();  //>>pause current sound
-                        artistBiographyText_audio.seekTo(0); //>> seek to start it again
                         playArtistBiographyText.setVisibility(View.VISIBLE);
                         stopArtistBiographyText.setVisibility(View.INVISIBLE);
                     }
