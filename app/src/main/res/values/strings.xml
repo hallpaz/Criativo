@@ -78,4 +78,6 @@
 
     <string name="gallery1_textview">Galeria Adriana Varejão</string>
     <string name="gallery2_textview">Galeria São Sebastião</string>
+    <string name="artist_biography_video"><u>Assistir vídeo</u></string>
+    <string name="title_activity_video">VideoActivity</string>
 </resources>

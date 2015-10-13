@@ -39,7 +39,7 @@
     <ImageButton android:id="@+id/fab_stop"
         android:layout_width="60sp" android:layout_height="60sp"
         android:layout_margin="@dimen/fab_margin" app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end" android:src="@android:drawable/checkbox_off_background"
+        app:layout_anchorGravity="bottom|end" android:src="@android:drawable/ic_media_pause"
         android:contentDescription="Parar áudio-descrição da obra."
         android:clickable="true"
         android:visibility="invisible" android:background="@drawable/background_details_button"

@@ -29,5 +29,6 @@
 
     <color name="hackathon_footer_color">#000</color>
     <color name="choose_gallery_button_color">#000</color>
+    <color name="watch_video">#800000</color>
 
 </resources>
